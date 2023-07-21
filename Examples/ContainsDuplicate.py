@@ -20,3 +20,16 @@ def containsDuplicated(nums):
 
 print(containsDuplicated(nums))  
 
+
+
+"""
+
+def  method(list):
+    for i in range(len(nums)):
+        for j in range(i):
+            print(i,j)
+            if nums[i] == nums[j]:
+                return True
+    return False
+    
+"""
