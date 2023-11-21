@@ -18,10 +18,11 @@ class Test():
     
     myStack = Stack()
     myStack.push(1)
-    myStack.push(2)  
-    myStack.pop()         
+    myStack.push(2)
+    myStack.push(5)  
+    #myStack.pop()         
     print(myStack.isEmpty()) 
     print(myStack.showLast())
     
-    myStack.pop()
+    #myStack.pop()
     print(myStack.elements)
