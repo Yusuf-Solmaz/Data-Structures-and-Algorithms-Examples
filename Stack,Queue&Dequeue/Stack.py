@@ -8,7 +8,7 @@ class Stack():
     def push(self,value):
         self.elements.append(value)
         
-    def pop (self,value):
+    def pop (self):
         self.elements.pop()
 
     def showLast(self):
@@ -18,6 +18,10 @@ class Test():
     
     myStack = Stack()
     myStack.push(1)
-    myStack.push(2)           
+    myStack.push(2)  
+    myStack.pop()         
     print(myStack.isEmpty()) 
     print(myStack.showLast())
+    
+    myStack.pop()
+    print(myStack.elements)
