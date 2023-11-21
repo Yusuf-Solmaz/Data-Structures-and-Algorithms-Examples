@@ -4,10 +4,10 @@ class Queue():
         self.elements = []
         
     def enqueue(self,value):
-        self.elements.insert(0,value)
+        self.elements.append(value)
     
     def dequeue(self):
-        self.elements.pop()
+        self.elements.pop(0)
         
     def isEmpty(self):
         return self.elements == []            
