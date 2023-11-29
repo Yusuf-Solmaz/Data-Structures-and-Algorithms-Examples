@@ -32,6 +32,7 @@ The total sum is 5 + 10 + 15 = 30.
 
 '''
 
+<<<<<<< HEAD
 ops = ["5","-2","4","C","D","9","+","+"]
 valueList = []
 def solution(ops:[]):
@@ -53,4 +54,15 @@ def solution(ops:[]):
     return sum(valueList)
             
 print(solution(ops))        
+=======
+ops = ["5","2","C","D","+"]
+valueList = []
+
+for value in ops:
+    if value not in ["C", "D", "+"]:
+        valueList.append(value)
+                
+        
+print(valueList)        
+>>>>>>> 4a949bf86d28b6d84fa592d0fb33fd1437c14023
         
