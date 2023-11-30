@@ -16,3 +16,22 @@ Example 3:
 Input: temperatures = [30,60,90]
 Output: [1,1,0]
 '''
+from collections import deque
+
+def daily_temperatures(temperatures):
+    result = [0] * len(temperatures)
+    stack = []  
+    
+    for ix, temperature in enumerate(temperatures):
+        while stack and temperature > stack[-1][0]:
+            stackTemperature, stackIndex = stack.pop()
+            result[stackIndex] = (ix - stackIndex)
+        stack.append([temperature, ix])
+    return result
+
+# Example 1:
+temperatures1 = [73, 74, 75, 71, 69, 72, 76, 73]
+print(daily_temperatures(temperatures1))
+
+
+          
