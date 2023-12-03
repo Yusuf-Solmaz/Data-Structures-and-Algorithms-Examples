@@ -58,3 +58,26 @@ def remove (n:int,head:Node):
     
       
 remove(1,firstNode)        
+
+
+
+def removeNthFromEnd(self, head: Node, n: int) -> Node:
+        
+        leftPointer = head
+        rightPointer = head
+        
+        while n > 0 and rightPointer:
+            rightPointer = rightPointer.next
+            n -= 1
+        
+        while rightPointer and rightPointer.next: 
+            leftPointer = leftPointer.next
+            rightPointer = rightPointer.next
+                
+        if leftPointer == head and not rightPointer:
+            return head.next
+
+        leftPointer.next = leftPointer.next.next
+        
+    
+        return head
