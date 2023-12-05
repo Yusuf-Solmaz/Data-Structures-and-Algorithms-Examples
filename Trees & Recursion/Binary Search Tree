@@ -11,6 +11,36 @@ class BST():
         
     def insert(self,value):
         newNode =  Node(value=value)
-           
+        
+        if self.root is None:
+            self.root = newNode
+            return True
+        
+        tempNode = self.root
+        
+        while True:
+            if newNode.value == tempNode.value:
+                return False
+            
+            if newNode.value < tempNode.value:
+                
+                if tempNode.leftNode is None:
+                    tempNode.leftNode = newNode
+                    return True
+                
+                tempNode = tempNode.leftNode
+            else:
+                if tempNode.rightNode is None:
+                    tempNode.rightNode = newNode
+                    return True
+                
+                tempNode = tempNode.rightNode   
+                        
+            
+tree = BST()   
+
+print(tree.insert(2))
+print(tree.insert(3))  
+print(tree.insert(1))     
         
             
