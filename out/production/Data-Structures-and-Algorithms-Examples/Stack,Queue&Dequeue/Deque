@@ -1,0 +1,37 @@
+class Deque():
+
+    def __init__(self):
+        self.elements = []
+        
+    
+    def addLeft(self,value):
+        self.elements.insert(0,value)
+    
+    def addRight(self,value):
+        self.elements.append(value)
+        
+    def removeRight(self):
+        self.elements.pop()
+        
+    def removeLeft(self):
+        self.elements.pop(0)    
+
+    def isEmpty(self):
+        return self.elements == []
+    
+    def size(self):
+        return len(self.elements)
+
+
+class Test():
+    
+    deque = Deque()
+    
+    deque.addLeft(1)
+    deque.addLeft(2)
+    deque.addRight(3)
+    
+    deque.removeRight()
+    
+    print(deque.size())
+    print(deque.elements)        
