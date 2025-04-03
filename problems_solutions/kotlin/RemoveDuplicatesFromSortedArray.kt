@@ -16,23 +16,27 @@ package problems_solutions.kotlin
  * It does not matter what you leave beyond the returned k (hence they are underscores).
  * */
 
-fun removeDuplicates(nums: MutableList<Int>): Int {
-    var index = 0
+fun removeDuplicates(nums: IntArray): Int {
+    if (nums.isEmpty()) return 0
 
-    while (index < nums.size - 1) {
-        if (nums[index] == nums[index + 1]) {
-            nums.removeAt(index)
-        } else {
-            index++
+    var index = 1
+    var uniqueIndex = 0
+
+    while (index < nums.size) {
+        if (nums[index] != nums[uniqueIndex]) {
+            uniqueIndex++
+            nums[uniqueIndex] = nums[index]
         }
+        index++
     }
-    return nums.size
+
+    return uniqueIndex + 1
 }
 
 
 fun main(){
 
-    val nums = mutableListOf(1,1,2)
+    val nums = intArrayOf(1, 1, 2, 3, 3, 4)
     println(removeDuplicates(nums))
 
 }
