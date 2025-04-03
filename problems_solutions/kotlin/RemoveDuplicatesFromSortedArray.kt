@@ -29,7 +29,6 @@ fun removeDuplicates(nums: IntArray): Int {
         }
         index++
     }
-
     return uniqueIndex + 1
 }
 
